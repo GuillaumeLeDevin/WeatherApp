@@ -24,13 +24,13 @@ if(navigator.geolocation) {
         AppelAPI(long,lat);
 
     }, () => {
-        alert(`Vous avez refusé la géolocalisation, l'application ne peur pas fonctionner, veuillez l'activer.!`)
+        alert(`You refused to get the geolocation, so the app can't work. Please to activate it!`)
     })
 }
 
 function AppelAPI(long, lat) {
 
-    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${CLEFAPI}`)
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=en&appid=${CLEFAPI}`)
     .then((reponse) => {
         return reponse.json();
     })
